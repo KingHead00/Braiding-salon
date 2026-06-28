@@ -1,1 +1,694 @@
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Queen of Braid Studio — Toronto's premier luxury braiding salon. Knotless braids, Senegalese twists, faux locs, cornrows & more." />
+  <title>| Queen of Braid Studio |</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ===== LOADER ===== -->
+  <div class="loader" id="loader" aria-hidden="true">
+    <div class="loader__inner">
+      <svg class="loader__crown" viewBox="0 0 100 70" fill="none">
+        <path class="crown-path" d="M5 60 L5 30 L28 50 L50 5 L72 50 L95 30 L95 60 Z" stroke="#C9A96E" stroke-width="1.5" stroke-linejoin="round" fill="none"/>
+        <line class="crown-base" x1="5" y1="65" x2="95" y2="65" stroke="#C9A96E" stroke-width="1.5"/>
+        <circle class="crown-gem" cx="50" cy="5" r="3" fill="#C9A96E"/>
+        <circle class="crown-gem" cx="5" cy="30" r="2" fill="#C9A96E"/>
+        <circle class="crown-gem" cx="95" cy="30" r="2" fill="#C9A96E"/>
+      </svg>
+      <p class="loader__text">Queen of Braid Studio</p>
+    </div>
+  </div>
+
+  <!-- ===== CURSOR ===== -->
+  <div class="cursor" id="cursor" aria-hidden="true"></div>
+  <div class="cursor-follower" id="cursorFollower" aria-hidden="true"></div>
+
+  <!-- ===== NAV ===== -->
+  <header class="nav" id="nav">
+    <a href="#home" class="nav__logo">
+      Queen of <span>Braid</span>
+    </a>
+    <nav class="nav__links" role="navigation" aria-label="Main navigation">
+      <a href="#about" class="nav__link">About</a>
+      <a href="#services" class="nav__link">Services</a>
+      <a href="#gallery" class="nav__link">Gallery</a>
+      <a href="#testimonials" class="nav__link">Reviews</a>
+      <a href="#booking" class="nav__link">Contact</a>
+    </nav>
+    <a href="#booking" class="nav__cta">Book Now</a>
+    <button class="nav__burger" id="navBurger" aria-label="Toggle menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </header>
+
+  <!-- Mobile menu -->
+  <div class="mobile-menu" id="mobileMenu" aria-hidden="true">
+    <a href="#about" class="mobile-menu__link">About</a>
+    <a href="#services" class="mobile-menu__link">Services</a>
+    <a href="#gallery" class="mobile-menu__link">Gallery</a>
+    <a href="#testimonials" class="mobile-menu__link">Reviews</a>
+    <a href="#booking" class="mobile-menu__link">Contact</a>
+    <a href="#booking" class="mobile-menu__cta">Book Now</a>
+  </div>
+
+  <main>
+
+    <!-- ===== HERO ===== -->
+    <section class="hero" id="home">
+      <div class="hero__bg-text" aria-hidden="true">QUEEN</div>
+
+      <div class="hero__content">
+        <div class="hero__tag reveal">
+          <span class="hero__tag-line"></span>
+          Toronto's Premier Braiding Studio
+        </div>
+        <h1 class="hero__title reveal">
+          Every Braid<br>
+          <em>Tells Your</em><br>
+          Story
+        </h1>
+        <p class="hero__sub reveal">
+          Luxury protective styling rooted in tradition,<br>elevated by artistry. You deserve to feel like royalty.
+        </p>
+        <div class="hero__actions reveal">
+          <a href="#booking" class="btn btn--primary">
+            <span>Book an Appointment</span>
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8H13M13 8L9 4M13 8L9 12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+          </a>
+          <a href="#services" class="btn btn--ghost">Explore Services</a>
+        </div>
+      </div>
+
+      <div class="hero__visual">
+        <div class="hero__visual-card reveal">
+          <div class="crown-large" aria-hidden="true">
+            <svg viewBox="0 0 160 120" fill="none">
+              <path d="M10 100 L10 55 L45 80 L80 10 L115 80 L150 55 L150 100 Z" stroke="#C9A96E" stroke-width="1.2" stroke-linejoin="round" fill="none" opacity="0.9"/>
+              <line x1="10" y1="108" x2="150" y2="108" stroke="#C9A96E" stroke-width="1.2" opacity="0.9"/>
+              <circle cx="80" cy="10" r="5" fill="#C9A96E"/>
+              <circle cx="10" cy="55" r="3.5" fill="#C9A96E"/>
+              <circle cx="150" cy="55" r="3.5" fill="#C9A96E"/>
+              <path d="M35 108 Q80 85 125 108" stroke="#C9A96E" stroke-width="0.6" fill="none" opacity="0.4"/>
+            </svg>
+          </div>
+          <div class="hero__stats">
+            <div class="hero__stat">
+              <span class="hero__stat-num" data-count="500">0</span>
+              <span class="hero__stat-label">Happy Clients</span>
+            </div>
+            <div class="hero__stat">
+              <span class="hero__stat-num" data-count="8">0</span>
+              <span class="hero__stat-label">Years Mastery</span>
+            </div>
+            <div class="hero__stat">
+              <span class="hero__stat-num" data-count="20">0</span>
+              <span class="hero__stat-label">Braid Styles</span>
+            </div>
+            <div class="hero__stat">
+              <span class="hero__stat-num">5★</span>
+              <span class="hero__stat-label">Google Rating</span>
+            </div>
+          </div>
+        </div>
+        <div class="hero__braid-pattern" aria-hidden="true">
+          <svg width="100%" height="100%" viewBox="0 0 300 500" preserveAspectRatio="xMidYMid slice">
+            <defs>
+              <pattern id="braidPattern" x="0" y="0" width="30" height="40" patternUnits="userSpaceOnUse">
+                <ellipse cx="15" cy="10" rx="10" ry="6" fill="none" stroke="#C9A96E" stroke-width="0.6" opacity="0.18"/>
+                <ellipse cx="15" cy="30" rx="10" ry="6" fill="none" stroke="#C9A96E" stroke-width="0.6" opacity="0.18"/>
+                <line x1="5" y1="10" x2="5" y2="30" stroke="#C9A96E" stroke-width="0.4" opacity="0.1"/>
+                <line x1="25" y1="10" x2="25" y2="30" stroke="#C9A96E" stroke-width="0.4" opacity="0.1"/>
+              </pattern>
+            </defs>
+            <rect width="300" height="500" fill="url(#braidPattern)"/>
+          </svg>
+        </div>
+      </div>
+
+      <div class="hero__scroll-hint" aria-hidden="true">
+        <span>Scroll</span>
+        <div class="hero__scroll-line"></div>
+      </div>
+    </section>
+
+    <!-- ===== MARQUEE ===== -->
+    <div class="marquee" aria-label="Services offered">
+      <div class="marquee__track">
+        <div class="marquee__content">
+          <span class="marquee__item">Knotless Braids</span><span class="marquee__sep">✦</span>
+          <span class="marquee__item">Box Braids</span><span class="marquee__sep">✦</span>
+          <span class="marquee__item">Senegalese Twists</span><span class="marquee__sep">✦</span>
+          <span class="marquee__item">Cornrows</span><span class="marquee__sep">✦</span>
+          <span class="marquee__item">Faux Locs</span><span class="marquee__sep">✦</span>
+          <span class="marquee__item">Feed-in Braids</span><span class="marquee__sep">✦</span>
+          <span class="marquee__item">Ghana Braids</span><span class="marquee__sep">✦</span>
+          <span class="marquee__item">Goddess Braids</span><span class="marquee__sep">✦</span>
+          <span class="marquee__item">Butterfly Locs</span><span class="marquee__sep">✦</span>
+          <!-- duplicate for seamless loop -->
+          <span class="marquee__item">Knotless Braids</span><span class="marquee__sep">✦</span>
+          <span class="marquee__item">Box Braids</span><span class="marquee__sep">✦</span>
+          <span class="marquee__item">Senegalese Twists</span><span class="marquee__sep">✦</span>
+          <span class="marquee__item">Cornrows</span><span class="marquee__sep">✦</span>
+          <span class="marquee__item">Faux Locs</span><span class="marquee__sep">✦</span>
+          <span class="marquee__item">Feed-in Braids</span><span class="marquee__sep">✦</span>
+          <span class="marquee__item">Ghana Braids</span><span class="marquee__sep">✦</span>
+          <span class="marquee__item">Goddess Braids</span><span class="marquee__sep">✦</span>
+          <span class="marquee__item">Butterfly Locs</span><span class="marquee__sep">✦</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- ===== ABOUT ===== -->
+    <section class="about" id="about">
+      <div class="about__left">
+        <div class="about__image-stack">
+          <div class="about__img-card about__img-card--main reveal">
+            <div class="about__img-placeholder">
+              <svg width="80" height="80" viewBox="0 0 100 120" fill="none">
+                <path d="M50 10 C30 10 15 25 15 45 C15 70 50 110 50 110 C50 110 85 70 85 45 C85 25 70 10 50 10Z" stroke="#C9A96E" stroke-width="1.5" fill="none" opacity="0.6"/>
+                <circle cx="50" cy="42" r="14" stroke="#C9A96E" stroke-width="1.2" fill="none" opacity="0.5"/>
+              </svg>
+              <p>Add your photo here</p>
+            </div>
+          </div>
+          <div class="about__img-card about__img-card--accent reveal" data-delay="200">
+            <p class="about__accent-text">
+              "Every strand holds a story. We help you tell yours."
+            </p>
+            <span class="about__accent-attr">— Queen of Braid Studio</span>
+          </div>
+          <div class="about__exp-badge reveal" data-delay="400">
+            <span class="about__exp-num">8+</span>
+            <span class="about__exp-label">Years of Excellence</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="about__right">
+        <p class="eyebrow reveal">Our Story</p>
+        <h2 class="section-title reveal">Braiding is Our Crown<br><em>& Culture</em></h2>
+        <p class="body-text reveal">
+          Founded with a deep reverence for the art of African braiding, Queen of Braid Studio is where tradition breathes and creativity soars. Each braid is a conversation — between our hands and your hair, between heritage and modernity.
+        </p>
+        <p class="body-text reveal">
+          We believe protective styling should never compromise your edges, your time, or your joy. Every client leaves not just with beautiful hair, but feeling truly seen and celebrated.
+        </p>
+        <ul class="about__values reveal">
+          <li class="about__value">
+            <span class="about__value-icon">✦</span>
+            Premium, hair-safe products exclusively
+          </li>
+          <li class="about__value">
+            <span class="about__value-icon">✦</span>
+            Personalized consultations for every style
+          </li>
+          <li class="about__value">
+            <span class="about__value-icon">✦</span>
+            Clean, welcoming, calming studio space
+          </li>
+          <li class="about__value">
+            <span class="about__value-icon">✦</span>
+            Committed to edge-preserving techniques
+          </li>
+        </ul>
+        <a href="#booking" class="btn btn--primary reveal">Meet Us in Studio</a>
+      </div>
+    </section>
+
+    <!-- ===== SERVICES ===== -->
+    <section class="services" id="services">
+      <div class="services__header">
+        <p class="eyebrow reveal">What We Offer</p>
+        <h2 class="section-title reveal">Our Services</h2>
+        <p class="services__sub reveal">Each style is crafted with intention. Prices vary by length, thickness, and complexity.</p>
+      </div>
+
+      <div class="services__grid">
+        <article class="service-card reveal" data-delay="0">
+          <div class="service-card__top">
+            <span class="service-card__icon" aria-hidden="true">
+              <svg width="28" height="28" viewBox="0 0 28 28" fill="none">
+                <path d="M7 4 Q14 2 21 4 L22 24 Q14 26 6 24 Z" stroke="#C9A96E" stroke-width="1.2" fill="none"/>
+                <path d="M7 4 Q14 8 21 4" stroke="#C9A96E" stroke-width="0.8" fill="none" opacity="0.6"/>
+                <path d="M6.5 10 Q14 13 21.5 10" stroke="#C9A96E" stroke-width="0.6" fill="none" opacity="0.4"/>
+                <path d="M6.5 16 Q14 19 21.5 16" stroke="#C9A96E" stroke-width="0.6" fill="none" opacity="0.4"/>
+              </svg>
+            </span>
+            <span class="service-card__price">From $180</span>
+          </div>
+          <h3 class="service-card__name">Knotless Box Braids</h3>
+          <p class="service-card__desc">The queen of protective styles. Lightweight, natural-looking, and gentle on your edges. Available in all lengths and sizes.</p>
+          <a href="#booking" class="service-card__link">
+            Book this style
+            <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2 7H12M12 7L8 3M12 7L8 11" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/></svg>
+          </a>
+        </article>
+
+        <article class="service-card reveal" data-delay="100">
+          <div class="service-card__top">
+            <span class="service-card__icon" aria-hidden="true">
+              <svg width="28" height="28" viewBox="0 0 28 28" fill="none">
+                <path d="M10 3 Q14 8 10 13 Q14 18 10 23" stroke="#C9A96E" stroke-width="1.2" fill="none" stroke-linecap="round"/>
+                <path d="M18 3 Q14 8 18 13 Q14 18 18 23" stroke="#C9A96E" stroke-width="1.2" fill="none" stroke-linecap="round"/>
+              </svg>
+            </span>
+            <span class="service-card__price">From $160</span>
+          </div>
+          <h3 class="service-card__name">Senegalese Twists</h3>
+          <p class="service-card__desc">Sleek, rope-like twists that drape beautifully and last for weeks. A timeless style with an elegant, polished finish.</p>
+          <a href="#booking" class="service-card__link">
+            Book this style
+            <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2 7H12M12 7L8 3M12 7L8 11" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/></svg>
+          </a>
+        </article>
+
+        <article class="service-card reveal" data-delay="200">
+          <div class="service-card__top">
+            <span class="service-card__icon" aria-hidden="true">
+              <svg width="28" height="28" viewBox="0 0 28 28" fill="none">
+                <line x1="5" y1="5" x2="5" y2="23" stroke="#C9A96E" stroke-width="1.2" stroke-linecap="round"/>
+                <line x1="10" y1="3" x2="10" y2="23" stroke="#C9A96E" stroke-width="1.2" stroke-linecap="round"/>
+                <line x1="15" y1="5" x2="15" y2="23" stroke="#C9A96E" stroke-width="1.2" stroke-linecap="round"/>
+                <line x1="20" y1="3" x2="20" y2="23" stroke="#C9A96E" stroke-width="1.2" stroke-linecap="round"/>
+                <line x1="25" y1="5" x2="25" y2="23" stroke="#C9A96E" stroke-width="1.2" stroke-linecap="round"/>
+                <path d="M5 8 Q14 6 25 8" stroke="#C9A96E" stroke-width="0.6" fill="none" opacity="0.5"/>
+              </svg>
+            </span>
+            <span class="service-card__price">From $80</span>
+          </div>
+          <h3 class="service-card__name">Cornrows & Feed-ins</h3>
+          <p class="service-card__desc">Classic patterns or creative designs. Perfect for low-maintenance wear or as a stunning base for other styles.</p>
+          <a href="#booking" class="service-card__link">
+            Book this style
+            <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2 7H12M12 7L8 3M12 7L8 11" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/></svg>
+          </a>
+        </article>
+
+        <article class="service-card reveal" data-delay="0">
+          <div class="service-card__top">
+            <span class="service-card__icon" aria-hidden="true">
+              <svg width="28" height="28" viewBox="0 0 28 28" fill="none">
+                <rect x="9" y="3" width="4" height="22" rx="2" stroke="#C9A96E" stroke-width="1.2" fill="none"/>
+                <rect x="15" y="3" width="4" height="22" rx="2" stroke="#C9A96E" stroke-width="1.2" fill="none"/>
+                <circle cx="11" cy="10" r="1.5" fill="#C9A96E" opacity="0.6"/>
+                <circle cx="17" cy="16" r="1.5" fill="#C9A96E" opacity="0.6"/>
+              </svg>
+            </span>
+            <span class="service-card__price">From $200</span>
+          </div>
+          <h3 class="service-card__name">Faux Locs</h3>
+          <p class="service-card__desc">Soft, distressed, or butterfly locs — channel boho royalty. Fully customizable in length, color, and texture.</p>
+          <a href="#booking" class="service-card__link">
+            Book this style
+            <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2 7H12M12 7L8 3M12 7L8 11" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/></svg>
+          </a>
+        </article>
+
+        <article class="service-card reveal" data-delay="100">
+          <div class="service-card__top">
+            <span class="service-card__icon" aria-hidden="true">
+              <svg width="28" height="28" viewBox="0 0 28 28" fill="none">
+                <path d="M4 22 Q14 4 24 22" stroke="#C9A96E" stroke-width="1.2" fill="none" stroke-linecap="round"/>
+                <path d="M6 18 Q14 8 22 18" stroke="#C9A96E" stroke-width="0.8" fill="none" opacity="0.5"/>
+                <path d="M9 22 Q14 14 19 22" stroke="#C9A96E" stroke-width="0.6" fill="none" opacity="0.35"/>
+              </svg>
+            </span>
+            <span class="service-card__price">From $120</span>
+          </div>
+          <h3 class="service-card__name">Ghana & Goddess Braids</h3>
+          <p class="service-card__desc">Bold, thick braids in intricate scalp patterns. Statement styles that command a room before you say a word.</p>
+          <a href="#booking" class="service-card__link">
+            Book this style
+            <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2 7H12M12 7L8 3M12 7L8 11" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/></svg>
+          </a>
+        </article>
+
+        <article class="service-card service-card--featured reveal" data-delay="200">
+          <div class="service-card__top">
+            <span class="service-card__icon" aria-hidden="true">
+              <svg width="28" height="28" viewBox="0 0 28 28" fill="none">
+                <path d="M14 3 L16 9 L22 9 L17.5 12.5 L19 19 L14 15.5 L9 19 L10.5 12.5 L6 9 L12 9 Z" stroke="#C9A96E" stroke-width="1.2" fill="none"/>
+              </svg>
+            </span>
+            <span class="service-card__price">From $60</span>
+          </div>
+          <h3 class="service-card__name">Kids' Braiding</h3>
+          <p class="service-card__desc">Gentle, patient styling for our little queens. We make every child feel comfortable, beautiful, and celebrated.</p>
+          <a href="#booking" class="service-card__link">
+            Book this style
+            <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2 7H12M12 7L8 3M12 7L8 11" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/></svg>
+          </a>
+        </article>
+      </div>
+    </section>
+
+    <!-- ===== GALLERY ===== -->
+    <section class="gallery" id="gallery">
+      <div class="gallery__header">
+        <div>
+          <p class="eyebrow reveal">Portfolio</p>
+          <h2 class="section-title reveal">The Braid Gallery</h2>
+        </div>
+        <p class="gallery__note reveal">Replace placeholders with your real photos</p>
+      </div>
+
+      <div class="gallery__grid">
+        <div class="gallery__item gallery__item--tall reveal" data-style="Knotless Box Braids">
+          <div class="gallery__placeholder">
+            <div class="gallery__placeholder-pattern">
+              <svg width="100%" height="100%" viewBox="0 0 200 420" preserveAspectRatio="xMidYMid slice">
+                <defs>
+                  <pattern id="p1" x="0" y="0" width="24" height="36" patternUnits="userSpaceOnUse">
+                    <ellipse cx="12" cy="9" rx="9" ry="5.5" fill="none" stroke="#C9A96E" stroke-width="0.7" opacity="0.3"/>
+                    <ellipse cx="12" cy="27" rx="9" ry="5.5" fill="none" stroke="#C9A96E" stroke-width="0.7" opacity="0.3"/>
+                  </pattern>
+                </defs>
+                <rect width="200" height="420" fill="url(#p1)"/>
+              </svg>
+            </div>
+            <span class="gallery__label">Knotless Box Braids</span>
+          </div>
+        </div>
+
+        <div class="gallery__item reveal" data-delay="100" data-style="Senegalese Twists">
+          <div class="gallery__placeholder">
+            <div class="gallery__placeholder-pattern">
+              <svg width="100%" height="100%" viewBox="0 0 200 200" preserveAspectRatio="xMidYMid slice">
+                <defs>
+                  <pattern id="p2" x="0" y="0" width="16" height="28" patternUnits="userSpaceOnUse">
+                    <path d="M8 0 Q14 7 8 14 Q2 21 8 28" stroke="#C9A96E" stroke-width="0.8" fill="none" opacity="0.35"/>
+                  </pattern>
+                </defs>
+                <rect width="200" height="200" fill="url(#p2)"/>
+              </svg>
+            </div>
+            <span class="gallery__label">Senegalese Twists</span>
+          </div>
+        </div>
+
+        <div class="gallery__item reveal" data-delay="200" data-style="Cornrows">
+          <div class="gallery__placeholder">
+            <div class="gallery__placeholder-pattern">
+              <svg width="100%" height="100%" viewBox="0 0 200 200" preserveAspectRatio="xMidYMid slice">
+                <defs>
+                  <pattern id="p3" x="0" y="0" width="12" height="16" patternUnits="userSpaceOnUse">
+                    <line x1="6" y1="0" x2="6" y2="16" stroke="#C9A96E" stroke-width="0.9" opacity="0.35"/>
+                    <ellipse cx="6" cy="8" rx="4" ry="3" fill="none" stroke="#C9A96E" stroke-width="0.5" opacity="0.2"/>
+                  </pattern>
+                </defs>
+                <rect width="200" height="200" fill="url(#p3)"/>
+              </svg>
+            </div>
+            <span class="gallery__label">Feed-in Cornrows</span>
+          </div>
+        </div>
+
+        <div class="gallery__item reveal" data-delay="150" data-style="Faux Locs">
+          <div class="gallery__placeholder">
+            <div class="gallery__placeholder-pattern">
+              <svg width="100%" height="100%" viewBox="0 0 200 200" preserveAspectRatio="xMidYMid slice">
+                <defs>
+                  <pattern id="p4" x="0" y="0" width="18" height="26" patternUnits="userSpaceOnUse">
+                    <rect x="5" y="0" width="8" height="26" rx="4" fill="none" stroke="#C9A96E" stroke-width="0.8" opacity="0.3"/>
+                    <circle cx="9" cy="13" r="2" fill="#C9A96E" opacity="0.15"/>
+                  </pattern>
+                </defs>
+                <rect width="200" height="200" fill="url(#p4)"/>
+              </svg>
+            </div>
+            <span class="gallery__label">Butterfly Faux Locs</span>
+          </div>
+        </div>
+
+        <div class="gallery__item reveal" data-delay="250" data-style="Ghana Braids">
+          <div class="gallery__placeholder">
+            <div class="gallery__placeholder-pattern">
+              <svg width="100%" height="100%" viewBox="0 0 200 200" preserveAspectRatio="xMidYMid slice">
+                <defs>
+                  <pattern id="p5" x="0" y="0" width="20" height="20" patternUnits="userSpaceOnUse">
+                    <circle cx="10" cy="10" r="7" fill="none" stroke="#C9A96E" stroke-width="0.7" opacity="0.28"/>
+                    <circle cx="10" cy="10" r="3" fill="none" stroke="#C9A96E" stroke-width="0.5" opacity="0.2"/>
+                  </pattern>
+                </defs>
+                <rect width="200" height="200" fill="url(#p5)"/>
+              </svg>
+            </div>
+            <span class="gallery__label">Ghana Braids</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="gallery__cta reveal">
+        <p>See more of our work on Instagram</p>
+        <a href="#" class="btn btn--outline">@queenofbraidstudio</a>
+      </div>
+    </section>
+
+    <!-- ===== TESTIMONIALS ===== -->
+    <section class="testimonials" id="testimonials">
+      <div class="testimonials__header">
+        <p class="eyebrow reveal">Client Love</p>
+        <h2 class="section-title reveal">What Our Queens Say</h2>
+      </div>
+
+      <div class="testimonials__grid">
+        <blockquote class="testimonial reveal" data-delay="0">
+          <div class="testimonial__stars" aria-label="5 stars">★★★★★</div>
+          <p class="testimonial__text">"I've never felt more like royalty. The attention to detail is unmatched — my knotless braids lasted 10 weeks and still looked fresh. Worth every penny."</p>
+          <footer class="testimonial__footer">
+            <div class="testimonial__avatar">AK</div>
+            <div>
+              <cite class="testimonial__name">Amara K.</cite>
+              <span class="testimonial__date">Knotless Braids</span>
+            </div>
+          </footer>
+        </blockquote>
+
+        <blockquote class="testimonial reveal" data-delay="150">
+          <div class="testimonial__stars" aria-label="5 stars">★★★★★</div>
+          <p class="testimonial__text">"The studio is so welcoming and peaceful. She listened to exactly what I wanted and delivered beyond my expectations. I won't go anywhere else."</p>
+          <footer class="testimonial__footer">
+            <div class="testimonial__avatar">SR</div>
+            <div>
+              <cite class="testimonial__name">Simone R.</cite>
+              <span class="testimonial__date">Senegalese Twists</span>
+            </div>
+          </footer>
+        </blockquote>
+
+        <blockquote class="testimonial reveal" data-delay="300">
+          <div class="testimonial__stars" aria-label="5 stars">★★★★★</div>
+          <p class="testimonial__text">"Brought my daughter in for the first time — she was nervous but left absolutely beaming. So patient and gentle. We're regulars now, both of us."</p>
+          <footer class="testimonial__footer">
+            <div class="testimonial__avatar">YO</div>
+            <div>
+              <cite class="testimonial__name">Yewande O.</cite>
+              <span class="testimonial__date">Kids' Braiding</span>
+            </div>
+          </footer>
+        </blockquote>
+      </div>
+
+      <div class="testimonials__rating reveal">
+        <div class="testimonials__big-star">★</div>
+        <div class="testimonials__rating-text">
+          <strong>4.9 / 5.0</strong>
+          <span>Based on 120+ Google reviews</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== BOOKING ===== -->
+    <section class="booking" id="booking">
+      <div class="booking__left">
+        <p class="eyebrow reveal">Get in Touch</p>
+        <h2 class="section-title reveal">Let's Create<br><em>Something Beautiful</em></h2>
+        <p class="body-text reveal">Fill out the form or reach out directly. We confirm bookings within 24 hours. A deposit is required to secure your spot.</p>
+
+        <ul class="contact-list reveal">
+          <li class="contact-item">
+            <span class="contact-item__icon">
+              <svg width="18" height="18" viewBox="0 0 18 18" fill="none"><path d="M9 1C5.7 1 3 3.7 3 7C3 11.5 9 17 9 17C9 17 15 11.5 15 7C15 3.7 12.3 1 9 1ZM9 9C7.9 9 7 8.1 7 7C7 5.9 7.9 5 9 5C10.1 5 11 5.9 11 7C11 8.1 10.1 9 9 9Z" stroke="#C9A96E" stroke-width="1.2" fill="none"/></svg>
+            </span>
+            <span>Toronto, Ontario, Canada</span>
+          </li>
+          <li class="contact-item">
+            <span class="contact-item__icon">
+              <svg width="18" height="18" viewBox="0 0 18 18" fill="none"><path d="M3 3H7L9 8L6.5 9.5C7.5 11.6 9.4 13.5 11.5 14.5L13 12L18 14V18C18 18 15 19 9 13C3 7 4 4 4 4L3 3Z" stroke="#C9A96E" stroke-width="1.2" fill="none"/></svg>
+            </span>
+            <span>(416) 555-0192</span>
+          </li>
+          <li class="contact-item">
+            <span class="contact-item__icon">
+              <svg width="18" height="18" viewBox="0 0 18 18" fill="none"><rect x="1" y="4" width="16" height="11" rx="1.5" stroke="#C9A96E" stroke-width="1.2" fill="none"/><path d="M1 5.5L9 11L17 5.5" stroke="#C9A96E" stroke-width="1.2" stroke-linecap="round"/></svg>
+            </span>
+            <span>hello@queenofbraidstudio.com</span>
+          </li>
+          <li class="contact-item">
+            <span class="contact-item__icon">
+              <svg width="18" height="18" viewBox="0 0 18 18" fill="none"><circle cx="9" cy="9" r="7" stroke="#C9A96E" stroke-width="1.2" fill="none"/><path d="M9 5V9.5L12 11" stroke="#C9A96E" stroke-width="1.2" stroke-linecap="round"/></svg>
+            </span>
+            <span>Tue – Sat: 9am – 7pm</span>
+          </li>
+        </ul>
+
+        <div class="booking__socials reveal">
+          <a href="#" class="booking__social" aria-label="Instagram">
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><rect x="2" y="2" width="16" height="16" rx="4" stroke="currentColor" stroke-width="1.3"/><circle cx="10" cy="10" r="4" stroke="currentColor" stroke-width="1.3"/><circle cx="14.5" cy="5.5" r="1" fill="currentColor"/></svg>
+          </a>
+          <a href="#" class="booking__social" aria-label="TikTok">
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M13 2C13 2 13.5 5 17 6V9C17 9 14.5 9 13 7.5V14C13 17 10.5 18 8.5 17C6.5 16 5.5 13.5 7 11.5C8 10 10 9.8 11 10.3V13.3C11 13.3 9.5 12.8 9 14C8.5 15.2 9.5 16.5 11 16C12.5 15.5 13 14 13 14V2Z" stroke="currentColor" stroke-width="1.3" fill="none"/></svg>
+          </a>
+          <a href="#" class="booking__social" aria-label="Facebook">
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><rect x="2" y="2" width="16" height="16" rx="4" stroke="currentColor" stroke-width="1.3"/><path d="M11 18V11H13L13.5 8.5H11V7C11 6 11.5 5.5 12.5 5.5H13.5V3C13.5 3 12.5 3 11.5 3C9 3 8 4.5 8 6.5V8.5H6V11H8V18" stroke="currentColor" stroke-width="1.3" stroke-linecap="round"/></svg>
+          </a>
+        </div>
+      </div>
+
+      <div class="booking__right">
+        <form class="booking-form" id="bookingForm" novalidate>
+          <div class="form-row">
+            <div class="form-group">
+              <label class="form-label" for="firstName">First Name</label>
+              <input class="form-input" type="text" id="firstName" name="firstName" placeholder="Amara" required />
+              <span class="form-error">Please enter your first name</span>
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="lastName">Last Name</label>
+              <input class="form-input" type="text" id="lastName" name="lastName" placeholder="Okafor" required />
+              <span class="form-error">Please enter your last name</span>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="email">Email Address</label>
+            <input class="form-input" type="email" id="email" name="email" placeholder="hello@email.com" required />
+            <span class="form-error">Please enter a valid email</span>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="phone">Phone Number</label>
+            <input class="form-input" type="tel" id="phone" name="phone" placeholder="(416) 555-0100" />
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="service">Desired Service</label>
+            <div class="form-select-wrap">
+              <select class="form-input form-select" id="service" name="service" required>
+                <option value="">Select a service...</option>
+                <option value="knotless">Knotless Box Braids</option>
+                <option value="twists">Senegalese Twists</option>
+                <option value="cornrows">Cornrows & Feed-ins</option>
+                <option value="locs">Faux Locs</option>
+                <option value="ghana">Ghana & Goddess Braids</option>
+                <option value="kids">Kids' Braiding</option>
+              </select>
+              <svg class="form-select-arrow" width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M2 4L6 8L10 4" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/></svg>
+            </div>
+            <span class="form-error">Please select a service</span>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label class="form-label" for="date">Preferred Date</label>
+              <input class="form-input" type="date" id="date" name="date" required />
+              <span class="form-error">Please select a date</span>
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="time">Preferred Time</label>
+              <div class="form-select-wrap">
+                <select class="form-input form-select" id="time" name="time">
+                  <option value="">Select time...</option>
+                  <option>9:00 AM</option>
+                  <option>10:00 AM</option>
+                  <option>11:00 AM</option>
+                  <option>12:00 PM</option>
+                  <option>1:00 PM</option>
+                  <option>2:00 PM</option>
+                  <option>3:00 PM</option>
+                  <option>4:00 PM</option>
+                  <option>5:00 PM</option>
+                </select>
+                <svg class="form-select-arrow" width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M2 4L6 8L10 4" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/></svg>
+              </div>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="notes">Additional Notes</label>
+            <textarea class="form-input form-textarea" id="notes" name="notes" placeholder="Hair length, colour preferences, reference photos link..."></textarea>
+          </div>
+
+          <button type="submit" class="btn btn--primary btn--full" id="submitBtn">
+            <span class="btn-text">Request Appointment</span>
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8H13M13 8L9 4M13 8L9 12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+          </button>
+
+          <div class="form-success" id="formSuccess" aria-live="polite">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="10" stroke="#C9A96E" stroke-width="1.5"/><path d="M7 12L10.5 15.5L17 9" stroke="#C9A96E" stroke-width="1.5" stroke-linecap="round"/></svg>
+            <p>Booking request sent! We'll confirm within 24 hours. 👑</p>
+          </div>
+        </form>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer">
+    <div class="footer__top">
+      <div class="footer__brand">
+        <p class="footer__logo">Queen of <span>Braid</span></p>
+        <p class="footer__tagline">Toronto's luxury braiding studio — where tradition meets artistry and every client leaves feeling like royalty.</p>
+      </div>
+      <div class="footer__col">
+        <p class="footer__col-title">Services</p>
+        <ul class="footer__links">
+          <li><a href="#services">Knotless Braids</a></li>
+          <li><a href="#services">Senegalese Twists</a></li>
+          <li><a href="#services">Cornrows</a></li>
+          <li><a href="#services">Faux Locs</a></li>
+          <li><a href="#services">Kids' Braiding</a></li>
+        </ul>
+      </div>
+      <div class="footer__col">
+        <p class="footer__col-title">Studio</p>
+        <ul class="footer__links">
+          <li><a href="#about">Our Story</a></li>
+          <li><a href="#gallery">Gallery</a></li>
+          <li><a href="#testimonials">Reviews</a></li>
+          <li><a href="#booking">Book Now</a></li>
+        </ul>
+      </div>
+      <div class="footer__col">
+        <p class="footer__col-title">Hours</p>
+        <ul class="footer__links">
+          <li><a href="#">Tuesday – Friday</a></li>
+          <li><a href="#">9:00am – 7:00pm</a></li>
+          <li><a href="#">Saturday</a></li>
+          <li><a href="#">9:00am – 5:00pm</a></li>
+          <li><a href="#" style="color: #7A6352;">Mon & Sun: Closed</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <p class="footer__copy">© 2026 Queen of Braid Studio. All rights reserved.</p>
+      <div class="footer__socials">
+        <a href="#" class="footer__social-link">Instagram</a>
+        <a href="#" class="footer__social-link">TikTok</a>
+        <a href="#" class="footer__social-link">Facebook</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
